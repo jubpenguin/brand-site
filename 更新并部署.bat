@@ -1,5 +1,5 @@
-@echo off
 chcp 65001 >nul
+@echo off
 title 更新并部署品牌官网
 cd /d "%~dp0"
 

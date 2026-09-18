@@ -119,7 +119,7 @@
       },
       "ctaSecondary": {
         "label": "品牌故事",
-        "href": "#story",
+        "href": "#about",
         "external": false,
         "variant": "outline"
       },
@@ -422,6 +422,7 @@
     "weibo": "",
     "wechat": "",
     "email": "terry.wu@welfull.com",
+    "showEmailInFooter": false,
     "phone": "0571-86825530",
     "privacy": "",
     "terms": ""
