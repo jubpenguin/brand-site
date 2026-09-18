@@ -12,14 +12,16 @@ export function Hero({ section }: { section: HeroSectionType }) {
     return (
       <section
         id="hero"
-        className="relative -mt-16 flex min-h-[100svh] items-center overflow-hidden"
+        className="relative -mt-16 overflow-hidden md:flex md:min-h-[100svh] md:items-center"
       >
-        <div className="absolute inset-0">
+        {/* 手机端：图片容器占首屏高度，图片完整显示（不裁剪），上下留浅色背景；
+            桌面端：absolute 满屏横图作为背景 */}
+        <div className="relative h-[calc(100svh-4rem)] w-full bg-brand-surface md:absolute md:inset-0 md:h-full">
           {hasMedia ? (
             <MediaGallery
               slot={image}
               fallbackAlt={title}
-              fit="cover"
+              fitClass="object-contain md:object-cover"
               imgClassName="h-full w-full"
               frameClassName="h-full w-full"
               priority
@@ -32,7 +34,8 @@ export function Hero({ section }: { section: HeroSectionType }) {
         {/* 文字可读性遮罩：底部加深，保证浅色图片上的文字清晰 */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/30" />
 
-        <div className="container-brand relative z-10 pt-24 pb-16">
+        {/* 文字：手机端叠加在图片底部；桌面端垂直居中 */}
+        <div className="container-brand absolute inset-x-0 bottom-0 z-10 pb-10 md:static md:pb-16 md:pt-24">
           <div className="max-w-2xl">
             {eyebrow && (
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-white/75">

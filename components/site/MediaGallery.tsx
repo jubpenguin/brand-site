@@ -10,6 +10,8 @@ interface MediaGalleryProps {
   fallbackAlt?: string;
   /** 图片填充方式 */
   fit?: 'cover' | 'contain';
+  /** 覆盖 object-fit 的响应式类（如 "object-contain md:object-cover"），非空时优先于 fit */
+  fitClass?: string;
   /** 每张图片的类名（控制宽高比等），例如 "aspect-[4/5] w-full" */
   imgClassName: string;
   /** 外层容器类名（圆角、底色等） */
@@ -31,6 +33,7 @@ export function MediaGallery({
   slot,
   fallbackAlt = '',
   fit = 'cover',
+  fitClass,
   imgClassName,
   frameClassName = '',
   priority = false,
@@ -44,7 +47,7 @@ export function MediaGallery({
   const count = images.length;
   const showCarousel = slot.carousel && count > 1;
   // Tailwind 需要静态类名，不能用 object-${fit} 拼接
-  const objectFit = fit === 'contain' ? 'object-contain' : 'object-cover';
+  const objectFit = fitClass || (fit === 'contain' ? 'object-contain' : 'object-cover');
   const go = useCallback(
     (next: number) => {
       if (count === 0) return;
