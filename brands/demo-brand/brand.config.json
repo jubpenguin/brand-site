@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "1.0",
+  "brand": {
+    "slug": "demo-brand",
+    "name": "bluem",
+    "logo": {
+      "src": "assets/BlueM-Website-Logo-2.png",
+      "alt": "Bluem",
+      "position": "center"
+    },
+    "tagline": "健康的口腔 健康的身体",
+    "description": "bluem是荷兰专业口腔护理品牌，创始人Peter Blijdorp博士是享誉欧洲的口腔外科医生，致力于研究独特的活性氧配方。bluem连续多年获得荷兰消费者选择奖，系列产品在全球40多个国家销售。",
+    "region": ""
+  },
+  "theme": {
+    "preset": "黑白极简",
+    "colors": {
+      "primary": "#009EDA",
+      "secondary": "#111111",
+      "accent": "#111111",
+      "background": "#FFFFFF",
+      "surface": "#F5F5F5",
+      "text": "#009EDA",
+      "muted": "#575e56",
+      "border": "#E5E5E5"
+    },
+    "fontHeading": "system-sans",
+    "fontBody": "system-sans",
+    "radius": "small",
+    "buttonStyle": "solid",
+    "maxWidth": 1200,
+    "sectionGap": 96,
+    "imageRadius": false
+  },
+  "navigation": [
+    {
+      "id": "nav_mu6bi1fj_b",
+      "label": "品牌",
+      "href": "#about",
+      "enabled": true
+    },
+    {
+      "id": "nav_products",
+      "label": "产品",
+      "href": "#products",
+      "enabled": true
+    },
+    {
+      "id": "nav_benefits",
+      "label": "卖点",
+      "href": "#benefits",
+      "enabled": false
+    },
+    {
+      "id": "nav_scenes",
+      "label": "场景",
+      "href": "#scenes",
+      "enabled": true
+    },
+    {
+      "id": "nav_story",
+      "label": "故事",
+      "href": "#story",
+      "enabled": false
+    },
+    {
+      "id": "nav_faq",
+      "label": "常见问题",
+      "href": "#faq",
+      "enabled": false
+    },
+    {
+      "id": "nav_mu5bwznk_c",
+      "label": "联系我们",
+      "href": "#contact",
+      "enabled": true
+    }
+  ],
+  "seo": {
+    "title": "Marlow — 日常护理，认真对待",
+    "description": "Marlow 是一个虚构的示例品牌（Demo），用于展示快消品品牌官网通用模板。简洁、高级、图片主导的品牌官网。",
+    "shareImage": {
+      "src": "assets/og.svg",
+      "alt": "Marlow 社交分享图",
+      "position": "center"
+    },
+    "favicon": {
+      "src": "assets/favicon.svg",
+      "alt": "Marlow",
+      "position": "center"
+    },
+    "canonical": ""
+  },
+  "sections": {
+    "hero": {
+      "id": "hero",
+      "enabled": true,
+      "order": 10,
+      "eyebrow": "",
+      "title": "打破传统 \n开启口腔感官新体验",
+      "body": "",
+      "image": {
+        "images": [
+          {
+            "src": "assets/bluem.jpg",
+            "alt": "bluem全系列爆珠",
+            "position": "center"
+          }
+        ],
+        "carousel": false,
+        "autoplay": false,
+        "interval": 4000
+      },
+      "cta": {
+        "label": "探索产品",
+        "href": "#products",
+        "external": false,
+        "variant": "solid"
+      },
+      "ctaSecondary": {
+        "label": "品牌故事",
+        "href": "#story",
+        "external": false,
+        "variant": "outline"
+      },
+      "layout": "fullbleed",
+      "mediaOrder": "first"
+    },
+    "about": {
+      "id": "about",
+      "enabled": true,
+      "order": 20,
+      "eyebrow": "关于 bluem",
+      "title": "重构口腔护理  解锁齿间全新享受",
+      "body": "bluem是荷兰专业口腔护理品牌，创始人Peter Blijdorp博士是享誉欧洲的口腔外科医生，致力于研究独特的活性氧配方。bluem连续多年获得荷兰消费者选择奖，系列产品在全球40多个国家销售。",
+      "image": {
+        "images": [
+          {
+            "src": "assets/image-2.png",
+            "alt": "创始人",
+            "position": "center"
+          }
+        ],
+        "carousel": false,
+        "autoplay": false,
+        "interval": 4000
+      },
+      "mediaOrder": "last"
+    },
+    "products": {
+      "id": "products",
+      "enabled": true,
+      "order": 25,
+      "eyebrow": "明星产品",
+      "title": "不止清新 定义便携口腔护理新享受"
+    },
+    "benefits": {
+      "id": "benefits",
+      "enabled": false,
+      "order": 40,
+      "title": "为什么选择 bluem",
+      "items": [
+        {
+          "id": "ben_1",
+          "icon": "🌿",
+          "title": "精简成分",
+          "body": "只保留真正有效的成分，拒绝多余添加。"
+        },
+        {
+          "id": "ben_2",
+          "icon": "🫧",
+          "title": "温和配方",
+          "body": "经过敏感肌测试，日常使用无负担。"
+        },
+        {
+          "id": "ben_3",
+          "icon": "♻️",
+          "title": "可回收包装",
+          "body": "采用可回收材料，减少环境足迹。"
+        },
+        {
+          "id": "ben_4",
+          "icon": "🐰",
+          "title": "零残忍",
+          "body": "从未在动物身上进行测试。"
+        }
+      ]
+    },
+    "scenes": {
+      "id": "scenes",
+      "enabled": true,
+      "order": 30,
+      "eyebrow": "生活场景",
+      "title": "融入你的每一天",
+      "items": [
+        {
+          "id": "scene_1",
+          "image": {
+            "images": [
+              {
+                "src": "assets/image-3.png",
+                "alt": "饭后 清新 社交分享",
+                "position": "center"
+              }
+            ],
+            "carousel": false,
+            "autoplay": false,
+            "interval": 4000
+          },
+          "title": "",
+          "body": ""
+        },
+        {
+          "id": "scene_2",
+          "image": {
+            "images": [
+              {
+                "src": "assets/image-6.png",
+                "alt": "开车提神",
+                "position": "center"
+              }
+            ],
+            "carousel": false,
+            "autoplay": false,
+            "interval": 4000
+          },
+          "title": "",
+          "body": ""
+        },
+        {
+          "id": "scene_3",
+          "image": {
+            "images": [
+              {
+                "src": "assets/06_-_-_3x4-2.png",
+                "alt": "06_梳妆台静物_无人物_3x4",
+                "position": "center"
+              }
+            ],
+            "carousel": false,
+            "autoplay": false,
+            "interval": 4000
+          },
+          "title": "",
+          "body": ""
+        }
+      ]
+    },
+    "story": {
+      "id": "story",
+      "enabled": false,
+      "order": 50,
+      "eyebrow": "品牌故事",
+      "title": "从一个简单的想法开始",
+      "body": "Marlow 诞生于对日常用品的不满：太多花哨的概念，太少真正的用心。我们想做的，是把基础护理做到位——干净的成分、舒服的质感、耐看的设计。\n\n本页面所有内容均为虚构示例，仅用于演示通用模板的模块结构和视觉效果。",
+      "image": {
+        "images": [
+          {
+            "src": "assets/story.svg",
+            "alt": "品牌故事配图（Demo 占位图）",
+            "position": "center"
+          }
+        ],
+        "carousel": false,
+        "autoplay": false,
+        "interval": 4000
+      },
+      "mediaOrder": "last",
+      "values": [
+        {
+          "id": "val_1",
+          "title": "真实",
+          "body": "不夸大、不盲从，用产品说话。"
+        },
+        {
+          "id": "val_2",
+          "title": "克制",
+          "body": "做减法，把资源留给最重要的部分。"
+        }
+      ]
+    },
+    "faq": {
+      "id": "faq",
+      "enabled": false,
+      "order": 80,
+      "title": "常见问题",
+      "items": [
+        {
+          "id": "faq_1",
+          "question": "这是真实品牌吗？",
+          "answer": "不是。Marlow 是一个完全虚构的示例品牌（Demo），用于展示和测试这套官网通用模板，所有内容和图片均为占位资料。"
+        },
+        {
+          "id": "faq_2",
+          "question": "如何替换成我自己的品牌？",
+          "answer": "运行 npm run dev 后访问 /editor，在编辑器中修改品牌名称、颜色、文案、产品和图片，然后保存并导出静态网站。无需修改代码。"
+        },
+        {
+          "id": "faq_3",
+          "question": "可以直接在官网购买吗？",
+          "answer": "第一版不包含购物车和支付功能。点击「前往购买」会跳转到你配置的淘宝、天猫或其他外部购买链接。"
+        },
+        {
+          "id": "faq_4",
+          "question": "我的数据会上传到云端吗？",
+          "answer": "不会。所有品牌配置和图片都保存在本地项目目录中，编辑器仅在本机运行。"
+        }
+      ]
+    },
+    "contact": {
+      "id": "contact",
+      "enabled": true,
+      "order": 90,
+      "eyebrow": "联系我们",
+      "title": "",
+      "body": "中国总代理：杭州洋逸谷健康科技有限公司",
+      "cta": {
+        "label": "发送邮件",
+        "href": "mailto:terry.wu@welfull.com",
+        "external": false,
+        "variant": "solid"
+      }
+    }
+  },
+  "products": [
+    {
+      "id": "prod_1",
+      "slug": "乳香油口香爆珠",
+      "name": "乳香油口香爆珠",
+      "subtitle": "Mastic oil mint ball",
+      "badge": "",
+      "images": [
+        {
+          "src": "assets/image-3.jpg",
+          "alt": "白底",
+          "position": "center"
+        }
+      ],
+      "carousel": false,
+      "autoplay": false,
+      "interval": 4000,
+      "highlights": [
+        "强劲清凉感一秒上头",
+        "希腊液体黄金乳香油",
+        "爆浆口感，咬破瞬间迸发清凉",
+        "0蔗糖，甜蜜无负担"
+      ],
+      "description": "添加珍贵乳香油，一咬爆浆释放薄荷凉感，0 蔗糖配方，兼顾口腔养护，时刻守护口气清爽。",
+      "specifications": [],
+      "usage": "",
+      "purchaseUrl": "https://item.taobao.com/item.htm?abbucket=0&id=617276610058",
+      "enabled": true,
+      "order": 0
+    },
+    {
+      "id": "prod_2",
+      "slug": "益生菌口香爆珠（玫瑰薄荷味）",
+      "name": "益生菌口香爆珠（玫瑰薄荷味）",
+      "subtitle": "Probiotics mint balls（rose flavor）",
+      "badge": "",
+      "images": [
+        {
+          "src": "assets/image-4.jpg",
+          "alt": "玫瑰 白底",
+          "position": "center"
+        }
+      ],
+      "carousel": false,
+      "autoplay": false,
+      "interval": 4000,
+      "highlights": [
+        "添加植物乳杆菌",
+        "爆浆口感，咬破瞬间迸发香气",
+        "玫瑰芬芳瞬间爆发",
+        "0蔗糖，甜蜜无负担"
+      ],
+      "description": "添加植物乳杆菌，0 蔗糖配方。薄皮爆浆清爽口感，随身便携，呼吸自带花香氛围感。",
+      "specifications": [],
+      "usage": "",
+      "purchaseUrl": "https://item.taobao.com/item.htm?abbucket=0&id=638126665672",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "prod_mu5a9dmx_b",
+      "slug": "益生菌口香爆珠（桃桃乌龙味）",
+      "name": "益生菌口香爆珠（桃桃乌龙味）",
+      "subtitle": "Probiotics mint balls（oolong flavor）",
+      "badge": "",
+      "images": [
+        {
+          "src": "assets/image-7.jpg",
+          "alt": "未命名",
+          "position": "center"
+        }
+      ],
+      "carousel": false,
+      "autoplay": false,
+      "interval": 4000,
+      "highlights": [
+        "添加植物乳杆菌",
+        "爆浆口感，咬破瞬间迸发香气",
+        "果香浓郁，茶香清爽",
+        "0蔗糖，甜蜜无负担"
+      ],
+      "description": "添加植物乳杆菌，0 蔗糖配方。轻咬即爆释放桃香乌龙风味，收获清甜清新口气。",
+      "specifications": [],
+      "usage": "",
+      "purchaseUrl": "https://item.taobao.com/item.htm?abbucket=0&id=649098093108",
+      "enabled": true,
+      "order": 2
+    }
+  ],
+  "links": {
+    "purchase": "https://shop.taobao.com/demo",
+    "purchaseLabel": "前往淘宝购买",
+    "socialTitle": "关注我们",
+    "contactTitle": "官方电商",
+    "socialLinks": [],
+    "instagram": "",
+    "xiaohongshu": "https://www.xiaohongshu.com/user/profile/5a6580c811be10457e5448ca",
+    "weibo": "",
+    "wechat": "",
+    "email": "terry.wu@welfull.com",
+    "phone": "0571-86825530",
+    "privacy": "",
+    "terms": ""
+  }
+}

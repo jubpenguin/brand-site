@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "brand": {
+    "slug": "_template",
+    "name": "你的品牌",
+    "logo": { "src": "", "alt": "", "position": "center" },
+    "tagline": "一句话品牌标语",
+    "description": "",
+    "region": ""
+  },
+  "theme": {
+    "preset": "自然清新",
+    "colors": {
+      "primary": "#234B3A",
+      "secondary": "#202421",
+      "accent": "#C9D6C4",
+      "background": "#FAF8F4",
+      "surface": "#FFFFFF",
+      "text": "#202421",
+      "muted": "#6B6F6C",
+      "border": "#E5E2DB"
+    },
+    "fontHeading": "system-serif",
+    "fontBody": "system-sans",
+    "radius": "medium",
+    "buttonStyle": "solid",
+    "maxWidth": 1200,
+    "sectionGap": 96,
+    "imageRadius": false
+  },
+  "navigation": [
+    { "id": "tpl_nav_products", "label": "产品", "href": "#products", "enabled": true },
+    { "id": "tpl_nav_benefits", "label": "卖点", "href": "#benefits", "enabled": true },
+    { "id": "tpl_nav_scenes", "label": "场景", "href": "#scenes", "enabled": true },
+    { "id": "tpl_nav_story", "label": "故事", "href": "#story", "enabled": false },
+    { "id": "tpl_nav_faq", "label": "常见问题", "href": "#faq", "enabled": false }
+  ],
+  "seo": {
+    "title": "",
+    "description": "",
+    "shareImage": { "src": "", "alt": "", "position": "center" },
+    "favicon": { "src": "", "alt": "", "position": "center" },
+    "canonical": ""
+  },
+  "sections": {
+    "hero": {
+      "id": "hero",
+      "enabled": true,
+      "order": 10,
+      "eyebrow": "",
+      "title": "",
+      "body": "",
+      "image": { "src": "", "alt": "", "position": "center" },
+      "cta": { "label": "了解产品", "href": "#products", "external": false, "variant": "solid" },
+      "ctaSecondary": { "label": "", "href": "", "external": false, "variant": "outline" },
+      "layout": "image-right"
+    },
+    "about": {
+      "id": "about",
+      "enabled": true,
+      "order": 20,
+      "eyebrow": "关于我们",
+      "title": "",
+      "body": "",
+      "image": { "src": "", "alt": "", "position": "center" }
+    },
+    "products": {
+      "id": "products",
+      "enabled": true,
+      "order": 25,
+      "eyebrow": "核心产品",
+      "title": ""
+    },
+    "benefits": {
+      "id": "benefits",
+      "enabled": true,
+      "order": 30,
+      "title": "为什么选择我们",
+      "items": []
+    },
+    "scenes": {
+      "id": "scenes",
+      "enabled": true,
+      "order": 40,
+      "eyebrow": "",
+      "title": "",
+      "items": []
+    },
+    "story": {
+      "id": "story",
+      "enabled": false,
+      "order": 50,
+      "eyebrow": "品牌故事",
+      "title": "",
+      "body": "",
+      "image": { "src": "", "alt": "", "position": "center" },
+      "values": []
+    },
+    "faq": {
+      "id": "faq",
+      "enabled": false,
+      "order": 80,
+      "title": "常见问题",
+      "items": []
+    },
+    "contact": {
+      "id": "contact",
+      "enabled": true,
+      "order": 90,
+      "eyebrow": "",
+      "title": "想了解更多？",
+      "body": "",
+      "cta": { "label": "联系我们", "href": "#footer", "external": false, "variant": "solid" }
+    }
+  },
+  "products": [],
+  "links": {
+    "purchase": "",
+    "purchaseLabel": "前往购买",
+    "instagram": "",
+    "xiaohongshu": "",
+    "weibo": "",
+    "wechat": "",
+    "email": "",
+    "privacy": "",
+    "terms": ""
+  }
+}

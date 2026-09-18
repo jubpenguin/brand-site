@@ -1,0 +1,58 @@
+# 自动构建并部署品牌官网到 GitHub Pages
+# 触发：push 到 main 分支，或手动运行（Actions 页面点 Run workflow）
+#
+# 部署地址：https://jubpenguin.github.io/brand-site/
+# 换自定义域名时：
+#   1. 把下面的 NEXT_PUBLIC_BASE_PATH 改为空（''）
+#   2. GitHub 仓库 → Settings → Pages → Custom domain 填你的域名
+#   3. 在域名服务商加 CNAME 记录指向 jubpenguin.github.io
+#   4. push 一次即可重新部署
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # 子路径部署时必须等于仓库名；换自定义域名后改为空 ''
+      NEXT_PUBLIC_BASE_PATH: /brand-site
+      # 站点绝对地址（OG 分享图等用）；换自定义域名后改为 https://你的域名
+      NEXT_PUBLIC_SITE_URL: https://jubpenguin.github.io
+      # 要导出的品牌；新建品牌后改成对应 slug（brands/ 下的文件夹名）
+      BRAND_SLUG: demo-brand
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run export -- --brand=${{ env.BRAND_SLUG }}
+      - name: 上传导出产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

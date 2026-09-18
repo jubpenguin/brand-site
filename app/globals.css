@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 默认值会被品牌主题 CSS 变量覆盖（layout 中注入） */
+  --brand-primary: #234b3a;
+  --brand-secondary: #202421;
+  --brand-accent: #c9d6c4;
+  --brand-background: #faf8f4;
+  --brand-surface: #ffffff;
+  --brand-text: #202421;
+  --brand-muted: #6b6f6c;
+  --brand-border: #e5e2db;
+  --font-heading: ui-serif, Georgia, serif;
+  --font-body: ui-sans-serif, system-ui, sans-serif;
+  --brand-radius: 14px;
+  --brand-radius-sm: 8px;
+  --brand-radius-lg: 22px;
+  --brand-max-width: 1200px;
+  --brand-section-gap: 96px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--brand-background);
+    color: var(--brand-text);
+    font-family: var(--font-body);
+    font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--brand-text);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--brand-accent);
+    color: var(--brand-text);
+  }
+}
+
+@layer components {
+  .container-brand {
+    width: 100%;
+    max-width: var(--brand-max-width);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-brand {
+      padding-inline: 2rem;
+    }
+  }
+
+  .section-gap {
+    padding-top: calc(var(--brand-section-gap) * 0.7);
+    padding-bottom: calc(var(--brand-section-gap) * 0.7);
+  }
+  @media (min-width: 768px) {
+    .section-gap {
+      padding-top: var(--brand-section-gap);
+      padding-bottom: var(--brand-section-gap);
+    }
+  }
+
+  .btn-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--brand-radius);
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+
+  .btn-solid {
+    background-color: var(--brand-primary);
+    color: var(--brand-background);
+  }
+  .btn-solid:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--brand-text);
+    border-color: var(--brand-text);
+  }
+  .btn-outline:hover {
+    background-color: var(--brand-text);
+    color: var(--brand-background);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--brand-text);
+  }
+  .btn-ghost:hover {
+    background-color: var(--brand-surface);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brand-muted);
+  }
+
+  .prose-brand p {
+    color: var(--brand-muted);
+    line-height: 1.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
