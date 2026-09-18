@@ -77,19 +77,19 @@
     }
   ],
   "seo": {
-    "title": "Marlow — 日常护理，认真对待",
-    "description": "Marlow 是一个虚构的示例品牌（Demo），用于展示快消品品牌官网通用模板。简洁、高级、图片主导的品牌官网。",
+    "title": "bluem — 荷兰专业口腔护理品牌",
+    "description": "",
     "shareImage": {
-      "src": "assets/og.svg",
-      "alt": "Marlow 社交分享图",
+      "src": "assets/BLUE002-DO-100_-logo_cmyk-JPEG-2.jpg",
+      "alt": "bluem官网",
       "position": "center"
     },
     "favicon": {
-      "src": "assets/favicon.svg",
-      "alt": "Marlow",
+      "src": "assets/BLUE002-DO-100_-logo_cmyk-JPEG-3.jpg",
+      "alt": "bluem官网",
       "position": "center"
     },
-    "canonical": ""
+    "canonical": "www.bluemcare.cn"
   },
   "sections": {
     "hero": {
@@ -412,7 +412,7 @@
     }
   ],
   "links": {
-    "purchase": "https://shop.taobao.com/demo",
+    "purchase": "https://shop545029956.taobao.com/?spm=a21xtw.29978516.0.0",
     "purchaseLabel": "前往淘宝购买",
     "socialTitle": "关注我们",
     "contactTitle": "官方电商",
