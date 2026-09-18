@@ -136,7 +136,7 @@
       "image": {
         "images": [
           {
-            "src": "assets/image-2.png",
+            "src": "assets/image-2.jpg",
             "alt": "创始人",
             "position": "center"
           }
@@ -198,7 +198,7 @@
           "image": {
             "images": [
               {
-                "src": "assets/image-3.png",
+                "src": "assets/scene-1.jpg",
                 "alt": "饭后 清新 社交分享",
                 "position": "center"
               }
@@ -215,7 +215,7 @@
           "image": {
             "images": [
               {
-                "src": "assets/image-6.png",
+                "src": "assets/image-6.jpg",
                 "alt": "开车提神",
                 "position": "center"
               }
@@ -232,7 +232,7 @@
           "image": {
             "images": [
               {
-                "src": "assets/06_-_-_3x4-2.png",
+                "src": "assets/06_-_-_3x4-2.jpg",
                 "alt": "06_梳妆台静物_无人物_3x4",
                 "position": "center"
               }
