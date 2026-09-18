@@ -141,6 +141,7 @@ export function createDefaultConfig(slug: string, name: string): BrandConfig {
       weibo: '',
       wechat: '',
       email: '',
+      showEmailInFooter: false,
       phone: '',
       privacy: '',
       terms: '',

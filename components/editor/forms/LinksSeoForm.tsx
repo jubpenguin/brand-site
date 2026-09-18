@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { useEditorStore } from '../editor-store';
-import { Field, TextInput, TextArea, SectionCard, Button } from '../FormControls';
+import { Field, TextInput, TextArea, Toggle, SectionCard, Button } from '../FormControls';
 import { ImageField } from '../ImageField';
 import { ArrayEditor } from '../ArrayEditor';
 import { genId } from '@/lib/brand-defaults';
@@ -43,6 +43,12 @@ export function LinksForm() {
         </Field>
         <Field label="邮箱">
           <TextInput value={links.email} onChange={(v) => set('email', v)} placeholder="hello@brand.com" />
+        </Field>
+        <Field label="页脚显示邮箱" hint="开启后邮箱同时显示在页脚「联系」栏；关闭则只在「联系我们」模块显示">
+          <Toggle
+            checked={links.showEmailInFooter}
+            onChange={(v) => patch((d) => { d.links.showEmailInFooter = v; })}
+          />
         </Field>
         <Field label="联系电话" hint="在「联系」模块直接显示，可含空格或横线">
           <TextInput value={links.phone} onChange={(v) => set('phone', v)} placeholder="400-000-0000" />

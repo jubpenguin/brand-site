@@ -289,6 +289,8 @@ export const linksSchema = z.object({
   weibo: z.string().default(''),
   wechat: z.string().default(''),
   email: z.string().default(''),
+  /** 是否在页脚「联系」栏显示邮箱（默认关闭；联系模块内的邮箱不受影响） */
+  showEmailInFooter: z.boolean().default(false),
   /** 联系电话（联系模块直接显示，可含空格/横线） */
   phone: z.string().default(''),
   privacy: z.string().default(''),

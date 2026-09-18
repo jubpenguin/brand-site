@@ -57,7 +57,7 @@ export function Footer({ config }: { config: BrandConfig }) {
             <div className="flex flex-col gap-2">
               <p className="eyebrow">{links.contactTitle || '联系'}</p>
               <ul className="flex flex-col gap-1.5">
-                {links.email && (
+                {links.showEmailInFooter && links.email && (
                   <li>
                     <a
                       href={`mailto:${links.email}`}
