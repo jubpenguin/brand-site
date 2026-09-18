@@ -4,6 +4,7 @@ import { create } from 'zustand';
 import type { BrandConfig } from '@/lib/brand-schema';
 import { createDefaultConfig } from '@/lib/brand-defaults';
 import { themeToCssVars } from '@/lib/themes';
+import { compressImageFile } from './imageCompress';
 
 export type DeviceMode = 'desktop' | 'tablet' | 'mobile';
 
@@ -212,6 +213,8 @@ export const useEditorStore = create<EditorState>((set, get) => ({
   uploadImage: async (file: File) => {
     const { activeSlug } = get();
     try {
+      // 上传前自动压缩（大图缩尺寸、摄影 PNG 转 JPEG）
+      file = await compressImageFile(file);
       const dataUrl = await new Promise<string>((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = () => resolve(reader.result as string);
