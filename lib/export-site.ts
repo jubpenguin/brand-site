@@ -167,7 +167,10 @@ export function exportSite(brandSlug: string): ExportResult {
   fs.writeFileSync(path.join(outDir, 'robots.txt'), robots, 'utf-8');
 
   // 生成 sitemap.xml
-  const origin = config.seo.canonical || 'https://example.com/';
+  // canonical 可能不带协议头（如 www.example.com），自动补全 https://
+  let canonical = config.seo.canonical || '';
+  if (canonical && !/^https?:\/\//i.test(canonical)) canonical = 'https://' + canonical;
+  const origin = canonical || 'https://example.com/';
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${origin}</loc></url>

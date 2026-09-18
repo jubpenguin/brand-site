@@ -13,10 +13,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const favicon = config.seo.favicon.src ? assetUrl(config.seo.favicon.src) : undefined;
   // OG 图等相对路径生成绝对 URL 的基准域名：
   // canonical（品牌配置）→ NEXT_PUBLIC_SITE_URL（部署环境）→ 本地
-  const siteUrl =
+  // 用户可能填写不带 https:// 的域名（如 www.example.com），这里自动补全
+  const rawSite =
     config.seo.canonical ||
     process.env.NEXT_PUBLIC_SITE_URL ||
     'http://localhost:3000';
+  const siteUrl = /^https?:\/\//i.test(rawSite) ? rawSite : 'https://' + rawSite;
 
   return {
     title,
@@ -36,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: description || undefined,
       images: shareImage ? [shareImage] : undefined,
     },
-    alternates: config.seo.canonical ? { canonical: config.seo.canonical } : undefined,
+    alternates: config.seo.canonical ? { canonical: siteUrl } : undefined,
   };
 }
 
